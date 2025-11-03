@@ -14,7 +14,7 @@
   --color-gray: #8a8a8a;
 
   /* Typography */
-  --font-heading: "Cormorant Garamond", serif;
+  --font-heading: "Poppins", sans-serif; /* Atualizando variável de tipografia para Poppins */
   --font-body: "Montserrat", sans-serif;
 
   /* Spacing */
@@ -313,41 +313,48 @@ p {
   position: relative;
   z-index: 3;
   color: var(--color-white);
+  padding-left: 2rem;
+  max-width: 600px;
 }
 
 .hero-subtitle {
   display: block;
   font-family: var(--font-body);
   font-size: 0.9rem;
-  font-weight: 300;
-  letter-spacing: 3px;
+  font-weight: 200;
+  letter-spacing: 4px;
   text-transform: uppercase;
   color: var(--color-accent);
   margin-bottom: 1rem;
+  text-align: left;
 }
 
 .hero-title {
-  font-family: var(--font-heading);
-  font-size: clamp(3rem, 8vw, 6rem);
-  font-weight: 700;
-  line-height: 1.1;
+  font-family: "Poppins", sans-serif;
+  /* Reduzido drasticamente de clamp(4rem, 12vw, 8rem) para clamp(2rem, 6vw, 3.5rem) - tamanho apropriado e elegante */
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 300;
+  line-height: 1.25;
   margin-bottom: 1.5rem;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  letter-spacing: 3px;
 }
 
 .hero-description {
   font-size: 1.1rem;
-  font-weight: 300;
-  line-height: 1.8;
+  /* Aumentando o line-height para mais respiração */
+  font-weight: 200;
+  line-height: 2;
   max-width: 600px;
-  margin: 0 auto 2.5rem;
+  margin-bottom: 2.5rem;
   opacity: 0.9;
+  text-align: left;
 }
 
 .hero-cta {
   display: flex;
   gap: 1rem;
-  justify-content: center;
   flex-wrap: wrap;
 }
 
