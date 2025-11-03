@@ -14,8 +14,8 @@
   --color-gray: #8a8a8a;
 
   /* Typography */
-  --font-heading: "Poppins", sans-serif; /* Atualizando variável de tipografia para Poppins */
-  --font-body: "Montserrat", sans-serif;
+  --font-heading: "Montserrat", sans-serif; /* Títulos agora usam Montserrat */
+  --font-body: "Poppins", sans-serif; /* Corpo de texto usa Poppins */
 
   /* Spacing */
   --spacing-xs: 0.5rem;
@@ -67,6 +67,16 @@ h6 {
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 1rem;
+}
+.hero-title {
+  font-family: var(--font-heading) !important;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* Hero section */
+.hero-title {
+  font-family: var(--font-heading);
 }
 
 h1 {
