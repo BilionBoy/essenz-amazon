@@ -1556,3 +1556,10 @@ section {
 .product-link:hover {
   color: #cccccc;
 }
+
+
+@media (max-width: 768px) {
+  .hero-title {
+    display: none !important;
+  }
+}
