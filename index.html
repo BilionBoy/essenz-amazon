@@ -3,14 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Essenza Amazon - Sabonetes Artesanais de Luxo</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Essenza Amazon - Sabonetes Veganos de Luxo</title>
+
+    <!-- Bootstrap CSS -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@200;300;400;500;600&display=swap"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+
+    <!-- Google Fonts (único link consolidado e na ordem correta) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- AOS Animation Library CSS -->
+    <link
+      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <!-- Preloader -->
@@ -27,159 +41,89 @@
             <circle
               cx="40"
               cy="40"
-              r="35"
-              stroke="#c9a961"
+              r="38"
+              stroke="url(#gradient)"
               stroke-width="2"
-              fill="none"
             />
             <path
-              d="M40 15 L40 65 M15 40 L65 40"
-              stroke="#c9a961"
-              stroke-width="2"
+              d="M40 20 L50 35 L40 50 L30 35 Z"
+              fill="url(#gradient)"
+              opacity="0.8"
             />
+            <defs>
+              <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop
+                  offset="0%"
+                  style="stop-color: #1a3a2e; stop-opacity: 1"
+                />
+                <stop
+                  offset="100%"
+                  style="stop-color: #4a7c59; stop-opacity: 1"
+                />
+              </linearGradient>
+            </defs>
           </svg>
         </div>
-        <p class="loading-text">ESSENZA AMAZON</p>
+        <p class="loading-text">Carregando Experiência</p>
       </div>
     </div>
 
-    <!-- Scroll Progress Bar -->
-    <div class="scroll-progress" id="scrollProgress"></div>
-
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-      <div class="container">
-        <div
-          class="d-flex justify-content-between align-items-center"
-          style="width: 100%"
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container-fluid px-4 px-lg-5">
+        <a class="navbar-brand" href="#hero">
+          <!-- Substituído texto por logo ESSENZ Amazon -->
+          <img
+            src="Logo Essenz - Branco.png"
+            alt="Essenz Amazon Logo"
+            class="navbar-logo"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
         >
-          <a href="#" class="navbar-brand">
-            <span class="brand-text">ESSENZA</span>
-            <span class="brand-subtext">AMAZON</span>
-          </a>
-          <div class="nav-links">
-            <a href="#home" class="nav-link">Início</a>
-            <a href="#philosophy" class="nav-link">Filosofia</a>
-            <a href="#collection" class="nav-link">Coleção</a>
-            <a href="#craftsmanship" class="nav-link">Artesanato</a>
-            <a href="#contact" class="nav-link">Contato</a>
-          </div>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#colecao">Coleção</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contato">Contato</a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section" id="home">
+    <section id="hero" class="hero-section">
+      <!-- Adicionado vídeo como fundo da seção hero -->
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="VIDEO.mp4" type="video/mp4" />
+        Seu navegador não suporta vídeo HTML5
+      </video>
       <div class="hero-overlay"></div>
       <div class="floating-particles"></div>
-
-      <div class="hero-content">
-        <span class="hero-subtitle">Luxo Natural da Amazônia</span>
-        <h1 class="hero-title">
-          Sabonetes Artesanais<br />que Transformam<br />seu Ritual de Cuidado
-        </h1>
-        <p class="hero-description">
-          Descubra a essência pura da Amazônia em cada sabonete. Criados à mão
-          com ingredientes naturais e sustentáveis, nossos produtos oferecem uma
-          experiência sensorial única e luxuosa.
-        </p>
-
-        <div class="hero-cta">
-          <button class="btn-luxury btn-primary">Explorar Coleção</button>
-          <button class="btn-luxury btn-luxury-outline">Nossa História</button>
-        </div>
-
-        <div class="scroll-indicator">
-          <span>Role para descobrir</span>
-          <div class="scroll-arrow"></div>
-        </div>
-
-        <!-- Products Showcase -->
-        <div style="margin-top: 80px">
-          <span class="hero-subtitle">NOSSA COLEÇÃO</span>
-          <div class="products-container">
-            <div class="product-card">
-              <div class="product-image-wrapper">
-                <img
-                  src="/placeholder.svg?height=160&width=160"
-                  alt="Sabonete de Lavanda"
-                />
-              </div>
-              <h3 class="product-title">Lavanda Amazônica</h3>
-              <p class="product-description">
-                Relaxamento profundo com lavanda orgânica da região amazônica
-              </p>
-              <a href="#" class="product-link">Ver detalhes</a>
+      <div class="container h-100">
+        <div class="row h-100 align-items-center">
+<div class="col-lg-12 hero-content" >
+            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200" style="font-size: 60px;">
+              O ESSENCIAL<br />DO INICIO AO FIM
+            </h1>
+            
             </div>
-
-            <div class="product-card">
-              <div class="product-image-wrapper">
-                <img
-                  src="/placeholder.svg?height=160&width=160"
-                  alt="Sabonete Cítrico"
-                />
-              </div>
-              <h3 class="product-title">Cítrico Energizante</h3>
-              <p class="product-description">
-                Energia revigorante com extratos cítricos amazônicos
-              </p>
-              <a href="#" class="product-link">Ver detalhes</a>
-            </div>
-
-            <div class="product-card">
-              <div class="product-image-wrapper">
-                <img
-                  src="/placeholder.svg?height=160&width=160"
-                  alt="Sabonete de Rosa"
-                />
-              </div>
-              <h3 class="product-title">Rosa Selvagem</h3>
-              <p class="product-description">
-                Hidratação intensa com pétalas de rosa da floresta
-              </p>
-              <a href="#" class="product-link">Ver detalhes</a>
-            </div>
-
-            <div class="product-card">
-              <div class="product-image-wrapper">
-                <img
-                  src="/placeholder.svg?height=160&width=160"
-                  alt="Sabonete de Menta"
-                />
-              </div>
-              <h3 class="product-title">Menta Refrescante</h3>
-              <p class="product-description">
-                Frescor natural com menta amazônica pura
-              </p>
-              <a href="#" class="product-link">Ver detalhes</a>
-            </div>
-
-            <div class="product-card">
-              <div class="product-image-wrapper">
-                <img
-                  src="/placeholder.svg?height=160&width=160"
-                  alt="Sabonete de Mel"
-                />
-              </div>
-              <h3 class="product-title">Mel Dourado</h3>
-              <p class="product-description">
-                Nutrição profunda com mel selvagem da Amazônia
-              </p>
-              <a href="#" class="product-link">Ver detalhes</a>
-            </div>
-
-            <div class="product-card">
-              <div class="product-image-wrapper">
-                <img
-                  src="/placeholder.svg?height=160&width=160"
-                  alt="Sabonete de Carvão"
-                />
-              </div>
-              <h3 class="product-title">Carvão Purificante</h3>
-              <p class="product-description">
-                Limpeza profunda com carvão ativado natural
-              </p>
-              <a href="#" class="product-link">Ver detalhes</a>
+            <div
+              class="scroll-indicator"
+              data-aos="fade-up"
+              data-aos-delay="800"
+            >
+              <span>Role para Revelar</span>
+              <div class="scroll-arrow"></div>
             </div>
           </div>
         </div>
@@ -187,50 +131,43 @@
     </section>
 
     <!-- Philosophy Section -->
-    <section class="philosophy-section" id="philosophy">
+    <section id="philosophy" class="philosophy-section">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-lg-6">
+          <div class="col-lg-6" data-aos="fade-right">
             <div class="philosophy-image-wrapper">
               <div class="image-frame">
                 <img
-                  src="/placeholder.svg?height=600&width=600"
-                  alt="Ingredientes da Amazônia"
+                  src="https://images.unsplash.com/photo-1600857062241-98e5dba7f214?w=500&h=600&fit=crop"
+                  alt="Filosofia Essenz"
+                  class="img-fluid philosophy-img"
                 />
                 <div class="image-overlay"></div>
               </div>
             </div>
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-6" data-aos="fade-left">
             <div class="philosophy-content">
               <span class="section-label">Nossa Filosofia</span>
-              <h2 class="section-title">
-                Beleza Natural,<br />Sustentabilidade Real
-              </h2>
+              <h2 class="section-title">Pureza que<br />Transforma</h2>
               <p class="section-description">
-                Acreditamos que o verdadeiro luxo vem da natureza. Cada sabonete
-                Essenza Amazon é uma celebração dos tesouros botânicos da
-                floresta amazônica, criado com respeito ao meio ambiente e às
-                comunidades locais.
+                Cada sabonete Essenz Amazon é uma obra-prima artesanal, criada
+                com ingredientes 100% veganos e sustentáveis da floresta
+                amazônica. Nossa missão é elevar o ritual diário de cuidado
+                pessoal a uma experiência de luxo consciente.
               </p>
-              <p class="section-description">
-                Nosso compromisso vai além da qualidade: trabalhamos diretamente
-                com cooperativas amazônicas, garantindo práticas justas e
-                sustentáveis em toda nossa cadeia de produção.
-              </p>
-
               <div class="philosophy-stats">
                 <div class="stat-item">
-                  <div class="stat-number">100%</div>
-                  <div class="stat-label">Natural</div>
+                  <h3 class="stat-number">100%</h3>
+                  <p class="stat-label">Vegano</p>
                 </div>
                 <div class="stat-item">
-                  <div class="stat-number">0%</div>
-                  <div class="stat-label">Químicos</div>
+                  <h3 class="stat-number">0%</h3>
+                  <p class="stat-label">Químicos</p>
                 </div>
                 <div class="stat-item">
-                  <div class="stat-number">45</div>
-                  <div class="stat-label">Dias de Cura</div>
+                  <h3 class="stat-number">∞</h3>
+                  <p class="stat-label">Sustentável</p>
                 </div>
               </div>
             </div>
@@ -240,107 +177,88 @@
     </section>
 
     <!-- Collection Section -->
-    <section class="collection-section" id="collection">
-      <div class="container">
-        <div class="text-center mb-5">
-          <span class="section-label">Nossa Coleção</span>
-          <h2 class="section-title">Sabonetes Exclusivos</h2>
-          <p class="section-description mx-auto">
-            Cada sabonete é uma obra de arte, cuidadosamente elaborado com
-            ingredientes premium da Amazônia.
-          </p>
+        <section class="hero-section">
+        <div class="hero-content">
+            <div class="row">
+                <div class="col-lg-5">
+                    <h1 class="hero-title">Nossas<br>novidades<br>para 2025</h1>
+                    <div class="hero-subtitle">
+                        Descubra mais
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="products-container">
+                        <div class="product-card">
+                            <div class="product-image-wrapper">
+                                <img src="https://guilhermecaik.my.canva.site/essenz/_assets/media/b616e56d444db3d708b2a8329bbbf930.png" alt="Sabonete de Andiroba">
+                            </div>
+                            <h3 class="product-title">Sabonete de Andiroba</h3>
+                            <p class="product-description">Experimente a revitalização e hidratação da Amazônia com o nosso sabonete de Andiroba. Esse cosmético orgânico oferece uma limpeza profunda, ação antisséptica e é indicado tanto para homens quanto para mulheres.</p>
+                            <a href="#" class="product-link">Descubra mais</a>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-image-wrapper">
+                                <img src="https://guilhermecaik.my.canva.site/essenz/_assets/media/6e0776dde2652bf7531ec7b5ee532c7c.png" alt="Sabonete de Açaí">
+                            </div>
+                            <h3 class="product-title">Sabonete de Açaí</h3>
+                            <p class="product-description">Produzido com manteiga e óleos vegetais, enriquecido com óleo de açaí e pó liofilizado, que oferece uma experiência única para cuidar da sua pele.</p>
+                            <a href="#" class="product-link">Descubra mais</a>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-image-wrapper">
+                                <img src="https://guilhermecaik.my.canva.site/essenz/_assets/media/6e0776dde2652bf7531ec7b5ee532c7c.png" alt="Sabonete de Sangue de Dragão">
+                            </div>
+                            <h3 class="product-title">Sabonete de Sangue de Dragão</h3>
+                            <p class="product-description">Descubra o poder do nosso produto único: produzido com Sangue de Dragão, extraído da árvore Croton Lechleri. Essa seiva especial possui propriedades bactericidas e é ela assépsia, tornando-se ideal para a lavagem de feridas.</p>
+                            <a href="#" class="product-link">Descubra mais</a>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-image-wrapper">
+                                <img src="/placeholder.svg?height=160&width=160" alt="Sabonete de Andiroba">
+                            </div>
+                            <h3 class="product-title">Sabonete de Andiroba</h3>
+                            <p class="product-description">Experimento a revitalização e hidratação da Amazônia com o nosso sabonete de Andiroba. Esse cosmético orgânico oferece uma limpeza profunda, ação antisséptica e é indicado tanto para homens quanto para mulheres.</p>
+                            <a href="#" class="product-link">Descubra mais</a>
+                        </div>
+
+                        <div class="nav-arrow">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="collection-grid">
-          <div class="collection-item">
-            <div class="product-card">
-              <div style="position: relative; overflow: hidden">
-                <img
-                  src="/placeholder.svg?height=400&width=400"
-                  alt="Lavanda Amazônica"
-                  class="product-image"
-                  style="width: 100%; height: 300px; object-fit: cover"
-                />
-                <div class="product-overlay">
-                  <button class="btn-view-details" onclick="openProductModal()">
-                    Ver Detalhes
-                  </button>
-                </div>
-              </div>
-              <div class="product-info">
-                <h3 class="product-name">Lavanda Amazônica</h3>
-                <p class="product-description">
-                  Relaxamento e tranquilidade com lavanda orgânica
-                </p>
-                <div class="product-price">R$ 45,00</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="collection-item">
-            <div class="product-card">
-              <div style="position: relative; overflow: hidden">
-                <img
-                  src="/placeholder.svg?height=400&width=400"
-                  alt="Cítrico Energizante"
-                  class="product-image"
-                  style="width: 100%; height: 300px; object-fit: cover"
-                />
-                <div class="product-overlay">
-                  <button class="btn-view-details">Ver Detalhes</button>
-                </div>
-              </div>
-              <div class="product-info">
-                <h3 class="product-name">Cítrico Energizante</h3>
-                <p class="product-description">
-                  Energia e vitalidade com extratos cítricos
-                </p>
-                <div class="product-price">R$ 42,00</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="collection-item">
-            <div class="product-card">
-              <div style="position: relative; overflow: hidden">
-                <img
-                  src="/placeholder.svg?height=400&width=400"
-                  alt="Rosa Selvagem"
-                  class="product-image"
-                  style="width: 100%; height: 300px; object-fit: cover"
-                />
-                <div class="product-overlay">
-                  <button class="btn-view-details">Ver Detalhes</button>
-                </div>
-              </div>
-              <div class="product-info">
-                <h3 class="product-name">Rosa Selvagem</h3>
-                <p class="product-description">
-                  Hidratação profunda com pétalas de rosa
-                </p>
-                <div class="product-price">R$ 48,00</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
-
     <!-- Craftsmanship Section -->
-    <section class="craftsmanship-section" id="craftsmanship">
+    <section id="artesanal" class="craftsmanship-section">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-lg-6 order-lg-2">
+          <div class="col-lg-6 order-lg-2" data-aos="fade-left">
+            <div class="craftsmanship-image-wrapper">
+              <div class="image-frame-alt">
+                <img
+                  src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=600&h=700&fit=crop&q=80"
+                  alt="Processo Artesanal"
+                  class="img-fluid"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1" data-aos="fade-right">
             <div class="craftsmanship-content">
-              <span class="section-label">Criado à Mão</span>
-              <h2 class="section-title">Feito com Alma</h2>
+              <span class="section-label">Processo Artesanal</span>
+              <h2 class="section-title">Criado à Mão,<br />Feito com Alma</h2>
               <p class="section-description">
                 Cada sabonete é cuidadosamente elaborado por artesãos
                 especializados, seguindo técnicas tradicionais de saponificação
                 a frio. Este processo preserva as propriedades naturais dos
                 ingredientes, resultando em produtos de qualidade excepcional.
               </p>
-
               <div class="process-steps">
                 <div class="step-item">
                   <div class="step-number">01</div>
@@ -349,7 +267,6 @@
                     <p>Ingredientes premium da Amazônia</p>
                   </div>
                 </div>
-
                 <div class="step-item">
                   <div class="step-number">02</div>
                   <div class="step-content">
@@ -357,7 +274,6 @@
                     <p>Processo artesanal de 45 dias</p>
                   </div>
                 </div>
-
                 <div class="step-item">
                   <div class="step-number">03</div>
                   <div class="step-content">
@@ -368,139 +284,101 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-6 order-lg-1">
-            <div class="craftsmanship-image-wrapper">
-              <div class="image-frame-alt">
-                <img
-                  src="/placeholder.svg?height=600&width=600"
-                  alt="Processo Artesanal"
-                />
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
 
     <!-- Sustainability Section -->
-    <section class="sustainability-section">
+    <section id="sustentavel" class="sustainability-section">
       <div class="sustainability-background"></div>
-      <div class="container" style="position: relative; z-index: 1">
-        <div class="text-center mb-5">
-          <span class="section-label" style="color: var(--color-accent)"
-            >Sustentabilidade</span
-          >
-          <h2 class="section-title" style="color: var(--color-white)">
-            Compromisso com o Planeta
-          </h2>
-          <p
-            class="section-description mx-auto"
-            style="color: rgba(255, 255, 255, 0.8)"
-          >
-            Cada escolha que fazemos reflete nosso compromisso com um futuro
-            mais sustentável.
-          </p>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+            <span class="section-label text-white">Compromisso Ambiental</span>
+            <h2 class="section-title text-white">Luxo Sustentável</h2>
+            <p class="section-description text-white mb-5">
+              Acreditamos que o verdadeiro luxo está em harmonia com a natureza.
+              Por isso, cada aspecto da Essenz Amazon é pensado para minimizar o
+              impacto ambiental e maximizar o bem-estar do planeta.
+            </p>
+          </div>
         </div>
-
         <div class="row g-4">
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
             <div class="sustainability-card">
               <div class="card-icon">
-                <svg
-                  width="60"
-                  height="60"
-                  viewBox="0 0 60 60"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+                <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
                   <circle
                     cx="30"
                     cy="30"
                     r="28"
-                    stroke="#c9a961"
+                    stroke="#4a7c59"
                     stroke-width="2"
                   />
                   <path
                     d="M30 15 L30 45 M20 25 L30 15 L40 25"
-                    stroke="#c9a961"
+                    stroke="#4a7c59"
                     stroke-width="2"
-                    fill="none"
+                    stroke-linecap="round"
                   />
                 </svg>
               </div>
-              <h3>Ingredientes Orgânicos</h3>
+              <h3>Embalagem Zero Plástico</h3>
               <p>
-                100% dos nossos ingredientes são orgânicos e certificados,
-                colhidos de forma sustentável na Amazônia.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="sustainability-card">
-              <div class="card-icon">
-                <svg
-                  width="60"
-                  height="60"
-                  viewBox="0 0 60 60"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle
-                    cx="30"
-                    cy="30"
-                    r="28"
-                    stroke="#c9a961"
-                    stroke-width="2"
-                  />
-                  <rect
-                    x="20"
-                    y="20"
-                    width="20"
-                    height="20"
-                    stroke="#c9a961"
-                    stroke-width="2"
-                    fill="none"
-                  />
-                </svg>
-              </div>
-              <h3>Embalagem Sustentável</h3>
-              <p>
-                Utilizamos apenas materiais recicláveis e biodegradáveis em
+                Utilizamos apenas materiais biodegradáveis e recicláveis em
                 todas as nossas embalagens.
               </p>
             </div>
           </div>
-
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
             <div class="sustainability-card">
               <div class="card-icon">
-                <svg
-                  width="60"
-                  height="60"
-                  viewBox="0 0 60 60"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+                <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
                   <circle
                     cx="30"
                     cy="30"
                     r="28"
-                    stroke="#c9a961"
+                    stroke="#4a7c59"
                     stroke-width="2"
                   />
                   <path
-                    d="M25 30 L30 35 L40 25"
-                    stroke="#c9a961"
+                    d="M30 20 Q35 25 30 30 Q25 35 30 40"
+                    stroke="#4a7c59"
                     stroke-width="2"
-                    fill="none"
+                    stroke-linecap="round"
                   />
                 </svg>
               </div>
-              <h3>Comércio Justo</h3>
+              <h3>Ingredientes Éticos</h3>
               <p>
                 Trabalhamos diretamente com comunidades locais, garantindo
-                remuneração justa e desenvolvimento sustentável.
+                comércio justo e sustentável.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="sustainability-card">
+              <div class="card-icon">
+                <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                  <circle
+                    cx="30"
+                    cy="30"
+                    r="28"
+                    stroke="#4a7c59"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M25 30 L28 33 L35 26"
+                    stroke="#4a7c59"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <h3>Carbono Neutro</h3>
+              <p>
+                Compensamos 100% das emissões de carbono através de projetos de
+                reflorestamento.
               </p>
             </div>
           </div>
@@ -511,50 +389,48 @@
     <!-- Testimonials Section -->
     <section class="testimonials-section">
       <div class="container">
-        <div class="text-center mb-5">
-          <span class="section-label">Depoimentos</span>
-          <h2 class="section-title">O Que Dizem Nossos Clientes</h2>
+        <div class="row">
+          <div class="col-12 text-center mb-5" data-aos="fade-up">
+            <span class="section-label">Experiências</span>
+            <h2 class="section-title">O Que Dizem Nossos Clientes</h2>
+          </div>
         </div>
-
         <div class="row g-4">
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
             <div class="testimonial-card">
               <div class="stars">★★★★★</div>
               <p class="testimonial-text">
-                "Os sabonetes da Essenza Amazon transformaram completamente
-                minha rotina de cuidados. A qualidade é incomparável e o aroma é
-                simplesmente divino!"
+                "Uma experiência sensorial incomparável. O aroma é divino e a
+                qualidade é excepcional. Nunca mais uso outro sabonete."
               </p>
               <div class="testimonial-author">
-                <strong>Maria Silva</strong>
+                <strong>Marina Silva</strong>
                 <span>São Paulo, SP</span>
               </div>
             </div>
           </div>
-
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
             <div class="testimonial-card">
               <div class="stars">★★★★★</div>
               <p class="testimonial-text">
-                "Finalmente encontrei produtos naturais que realmente funcionam.
-                Minha pele nunca esteve tão saudável e hidratada."
+                "Finalmente encontrei um produto de luxo que respeita o meio
+                ambiente. A Essenz Amazon é perfeita em todos os aspectos."
               </p>
               <div class="testimonial-author">
-                <strong>Ana Costa</strong>
+                <strong>Carlos Mendes</strong>
                 <span>Rio de Janeiro, RJ</span>
               </div>
             </div>
           </div>
-
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
             <div class="testimonial-card">
               <div class="stars">★★★★★</div>
               <p class="testimonial-text">
-                "Adoro saber que estou usando produtos sustentáveis e que apoiam
-                comunidades locais. Qualidade e consciência juntas!"
+                "A qualidade artesanal é evidente em cada detalhe. Minha pele
+                nunca esteve tão hidratada e saudável."
               </p>
               <div class="testimonial-author">
-                <strong>Carlos Mendes</strong>
+                <strong>Ana Beatriz</strong>
                 <span>Brasília, DF</span>
               </div>
             </div>
@@ -564,60 +440,63 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="contact-section" id="contact">
+    <section id="contato" class="contact-section">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
+        <div class="row align-items-center">
+          <div class="col-lg-6" data-aos="fade-right">
             <span class="section-label">Entre em Contato</span>
-            <h2 class="section-title">Fale Conosco</h2>
-            <p class="section-description">
-              Tem alguma dúvida ou sugestão? Adoraríamos ouvir você. Nossa
-              equipe está pronta para ajudar.
+            <h2 class="section-title">Vamos Criar Algo<br />Extraordinário</h2>
+            <p class="section-description mb-4">
+              Interessado em nossa coleção exclusiva ou em parcerias? Entre em
+              contato conosco e descubra como a Essenz Amazon pode transformar
+              sua experiência de cuidado pessoal.
             </p>
-
             <div class="contact-info">
               <div class="info-item">
                 <strong>Email</strong>
-                <p>contato@essenzaamazon.com.br</p>
+                <p>contato@Essenzmazon.com.br</p>
               </div>
               <div class="info-item">
                 <strong>Telefone</strong>
-                <p>+55 (11) 9999-9999</p>
+                <p>+55 69 3225-4160</p>
               </div>
               <div class="info-item">
-                <strong>Endereço</strong>
-                <p>Rua das Flores, 123 - São Paulo, SP</p>
+                <strong>Localização</strong>
+                <p>Porto Velho, Rondônia - Brasil</p>
               </div>
             </div>
           </div>
-
-          <div class="col-lg-6">
+          <div class="col-lg-6" data-aos="fade-left">
             <form class="contact-form">
-              <div class="mb-3">
+              <div class="mb-4">
                 <input
                   type="text"
                   class="form-control form-control-luxury"
                   placeholder="Seu Nome"
-                  required
                 />
               </div>
-              <div class="mb-3">
+              <div class="mb-4">
                 <input
                   type="email"
                   class="form-control form-control-luxury"
                   placeholder="Seu Email"
-                  required
                 />
               </div>
-              <div class="mb-3">
+              <div class="mb-4">
+                <input
+                  type="tel"
+                  class="form-control form-control-luxury"
+                  placeholder="Seu Telefone"
+                />
+              </div>
+              <div class="mb-4">
                 <textarea
                   class="form-control form-control-luxury"
                   rows="5"
                   placeholder="Sua Mensagem"
-                  required
                 ></textarea>
               </div>
-              <button type="submit" class="btn-luxury btn-primary w-100">
+              <button type="submit" class="btn btn-primary btn-luxury w-100">
                 Enviar Mensagem
               </button>
             </form>
@@ -629,40 +508,37 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
-        <div class="row g-4">
-          <div class="col-lg-4">
+        <div class="row">
+          <div class="col-lg-4 mb-4 mb-lg-0">
             <div class="footer-brand">
-              <span class="brand-text">ESSENZA</span>
+              <span class="brand-text">Essenz</span>
               <span class="brand-subtext">AMAZON</span>
             </div>
             <p class="footer-description">
-              Sabonetes artesanais de luxo, criados com ingredientes naturais da
-              Amazônia. Beleza sustentável para seu ritual de cuidado.
+              Luxo vegano artesanal da Amazônia. Criando experiências sensoriais
+              únicas desde 2020.
             </p>
           </div>
-
-          <div class="col-lg-2">
-            <h4 class="footer-title">Links</h4>
+          <div class="col-lg-2 col-6 mb-4 mb-lg-0">
+            <h5 class="footer-title">Navegação</h5>
             <ul class="footer-links">
-              <li><a href="#home">Início</a></li>
-              <li><a href="#philosophy">Filosofia</a></li>
-              <li><a href="#collection">Coleção</a></li>
-              <li><a href="#craftsmanship">Artesanato</a></li>
+              <li><a href="#colecao">Coleção</a></li>
+              <li><a href="#artesanal">Artesanal</a></li>
+              <li><a href="#sustentavel">Sustentável</a></li>
+              <li><a href="#contato">Contato</a></li>
             </ul>
           </div>
-
-          <div class="col-lg-3">
-            <h4 class="footer-title">Suporte</h4>
+          <div class="col-lg-2 col-6 mb-4 mb-lg-0">
+            <h5 class="footer-title">Suporte</h5>
             <ul class="footer-links">
               <li><a href="#">FAQ</a></li>
-              <li><a href="#">Envio</a></li>
+              <li><a href="#">Envios</a></li>
               <li><a href="#">Devoluções</a></li>
-              <li><a href="#">Termos</a></li>
+              <li><a href="#">Garantia</a></li>
             </ul>
           </div>
-
-          <div class="col-lg-3">
-            <h4 class="footer-title">Newsletter</h4>
+          <div class="col-lg-4">
+            <h5 class="footer-title">Newsletter</h5>
             <p class="footer-newsletter-text">
               Receba novidades e ofertas exclusivas
             </p>
@@ -671,71 +547,80 @@
                 type="email"
                 class="form-control"
                 placeholder="Seu email"
-                required
               />
-              <button type="submit" class="btn">Inscrever</button>
+              <button type="submit" class="btn btn-primary">→</button>
             </form>
-            <div class="social-links mt-3">
+            <div class="social-links mt-4">
               <a href="#" class="social-link">Instagram</a>
               <a href="#" class="social-link">Facebook</a>
+              <a href="#" class="social-link">WhatsApp</a>
             </div>
           </div>
         </div>
-
         <div class="footer-bottom">
-          <p>&copy; 2025 Essenza Amazon. Todos os direitos reservados.</p>
+          <p>&copy; 2025 Essenz Amazon. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
 
-    <!-- Product Modal -->
-    <div class="product-modal" id="productModal">
+    <!-- 3D Product Modal -->
+    <div id="productModal" class="product-modal">
       <div class="modal-backdrop" onclick="closeProductModal()"></div>
       <div class="modal-container">
-        <button class="modal-close" onclick="closeProductModal()">✕</button>
+        <button class="modal-close" onclick="closeProductModal()">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+
         <div class="modal-content">
           <div class="modal-product-3d">
             <div class="product-3d-scene">
-              <div class="product-3d-wrapper" id="product3D">
-                <div class="product-3d-glow"></div>
+              <div class="product-3d-wrapper" id="product3DWrapper">
                 <img
-                  src="/placeholder.svg?height=400&width=400"
-                  alt="Produto 3D"
+                  id="modalProductImage"
+                  src="https://images.unsplash.com/photo-1600857062241-98e5dba7f214?w=400&h=400&fit=crop"
+                  alt="Product"
                   class="product-3d-image"
                 />
+                <div class="product-3d-glow"></div>
                 <div class="product-3d-particles"></div>
               </div>
               <div class="product-3d-controls">
-                <p class="control-hint">Arraste para rotacionar</p>
+                <span class="control-hint">Arraste para rotacionar</span>
               </div>
             </div>
           </div>
 
           <div class="modal-product-info">
-            <span class="product-badge">Edição Limitada</span>
-            <h2 class="modal-product-title">Lavanda Amazônica</h2>
-            <p class="modal-product-subtitle">
-              Relaxamento e tranquilidade natural
+            <div class="product-badge">Edição Limitada</div>
+            <h2 id="modalProductName" class="modal-product-title">Produto</h2>
+            <p id="modalProductDescription" class="modal-product-subtitle">
+              Descrição
             </p>
 
             <div class="modal-product-details">
               <div class="detail-section">
-                <h4>Benefícios</h4>
-                <ul>
-                  <li>Relaxamento profundo e alívio do estresse</li>
-                  <li>Hidratação intensa e duradoura</li>
-                  <li>Aroma terapêutico natural</li>
-                  <li>Propriedades anti-inflamatórias</li>
+                <h4>Ingredientes Principais</h4>
+                <ul id="modalProductIngredients">
+                  <li>Ingrediente 1</li>
+                  <li>Ingrediente 2</li>
                 </ul>
               </div>
 
               <div class="detail-section">
-                <h4>Ingredientes Principais</h4>
-                <ul>
-                  <li>Óleo essencial de lavanda orgânica</li>
-                  <li>Manteiga de karité amazônica</li>
-                  <li>Óleo de coco virgem</li>
-                  <li>Argila roxa natural</li>
+                <h4>Benefícios</h4>
+                <ul id="modalProductBenefits">
+                  <li>Benefício 1</li>
+                  <li>Benefício 2</li>
                 </ul>
               </div>
 
@@ -756,7 +641,7 @@
                   </div>
                   <div class="spec-item">
                     <span class="spec-label">Tipo</span>
-                    <span class="spec-value">Facial/Corporal</span>
+                    <span class="spec-value">Vegano</span>
                   </div>
                 </div>
               </div>
@@ -764,14 +649,14 @@
 
             <div class="modal-product-price">
               <span class="price-label">Preço</span>
-              <span class="price-value">R$ 45,00</span>
+              <span id="modalProductPrice" class="price-value">R$ 0,00</span>
             </div>
 
             <div class="modal-product-actions">
-              <button class="btn-luxury btn-primary btn-add-cart">
+              <button class="btn btn-primary btn-luxury btn-add-cart">
                 Adicionar ao Carrinho
               </button>
-              <button class="btn-luxury btn-luxury-outline">
+              <button class="btn btn-outline-primary btn-luxury-outline">
                 Comprar Agora
               </button>
             </div>
@@ -780,85 +665,13 @@
       </div>
     </div>
 
-    <!-- Bootstrap CSS (for grid system) -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script>
-      // Preloader
-      window.addEventListener("load", function () {
-        setTimeout(function () {
-          document.getElementById("preloader").classList.add("hidden");
-        }, 1500);
-      });
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-      // Navbar scroll effect
-      window.addEventListener("scroll", function () {
-        const navbar = document.getElementById("navbar");
-        if (window.scrollY > 100) {
-          navbar.classList.add("scrolled");
-        } else {
-          navbar.classList.remove("scrolled");
-        }
-
-        // Scroll progress bar
-        const scrollProgress = document.getElementById("scrollProgress");
-        const scrollHeight =
-          document.documentElement.scrollHeight - window.innerHeight;
-        const scrolled = (window.scrollY / scrollHeight) * 100;
-        scrollProgress.style.width = scrolled + "%";
-      });
-
-      // Product Modal
-      function openProductModal() {
-        document.getElementById("productModal").classList.add("active");
-        document.body.style.overflow = "hidden";
-      }
-
-      function closeProductModal() {
-        document.getElementById("productModal").classList.remove("active");
-        document.body.style.overflow = "auto";
-      }
-
-      // 3D Product Rotation
-      const product3D = document.getElementById("product3D");
-      let isDragging = false;
-      let startX = 0;
-      let currentRotation = 0;
-
-      product3D.addEventListener("mousedown", function (e) {
-        isDragging = true;
-        startX = e.clientX;
-      });
-
-      document.addEventListener("mousemove", function (e) {
-        if (isDragging) {
-          const deltaX = e.clientX - startX;
-          currentRotation += deltaX * 0.5;
-          product3D.style.transform = `rotateY(${currentRotation}deg)`;
-          startX = e.clientX;
-        }
-      });
-
-      document.addEventListener("mouseup", function () {
-        isDragging = false;
-      });
-
-      // Smooth scroll for navigation links
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute("href"));
-          if (target) {
-            target.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            });
-          }
-        });
-      });
-    </script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
   </body>
 </html>
